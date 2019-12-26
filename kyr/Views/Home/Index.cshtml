@@ -1,0 +1,31 @@
+﻿<br />
+<div class="first">
+    <p>Отсортировать новости по тегу:</p>
+    <a href="/" class="btn btn-outline-primary btn-block">Все новости</a>
+    @{
+        foreach (var tag in Model.alltags)
+        { <a href="/Second/List/@tag.Name" class="btn btn-outline-primary btn-block">@tag.Name</a> }
+    }
+    <br />
+    <h1>Отзывы</h1>
+    @{
+        foreach (var review in Model.allreviews)
+        { <div> <p>- @review.text</p> </div> }
+    }
+</div>
+
+<div class="second">
+    <h1>Новости</h1>
+    @{
+        foreach (var post in Model.allposts)
+        {
+            <div>
+                <hr>
+                <p><button type="button" class="btn btn-primary btn-sm">@post.Tag.Name</button></p>
+                <img class="img-thumbnail" src="@post.img" alt="@post.id">
+                <h4>@post.title </h4>
+                <p>@post.text</p>
+            </div>
+        }
+    }
+</div>

@@ -1,0 +1,29 @@
+﻿
+img {
+    height: 300px;
+    width: 200px;
+}
+
+div[class="col-md-4"] {
+    float: left;
+}
+div[class="col-md-8"] {
+    float: left;
+}
+
+div.first {
+    
+    width: 20%;
+    float:left;
+}
+
+div.second {
+   
+    width: 70%;
+    float: right;
+}
+
+li {
+    list-style-type: none;
+    display: inline-block;
+}
